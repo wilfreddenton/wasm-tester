@@ -88,7 +88,7 @@ impl contract::built_in::context::HostWithStore for Runtime {
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    let path = Path::new(&std::env::var("CARGO_MANIFEST_DIR")?)
+    let path = Path::new(&env!("CARGO_MANIFEST_DIR"))
         .join("../../target/wasm32-unknown-unknown/debug/guest.wasm");
     if !path.exists() {
         return Err(anyhow::anyhow!("guest.wasm not found"));
