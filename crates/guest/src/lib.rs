@@ -8,8 +8,8 @@ wit_bindgen::generate!({
 struct Contract;
 
 impl Guest for Contract {
-    fn use_foo() -> String {
-        contract::built_in::context::foo()
+    async fn use_foo() -> String {
+        contract::built_in::context::foo().await
     }
 }
 
