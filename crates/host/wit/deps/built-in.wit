@@ -1,0 +1,9 @@
+package contract:built-in;
+
+interface context {
+    foo: func() -> string;
+}
+
+world built-in {
+    import context;
+}

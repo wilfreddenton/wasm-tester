@@ -1,0 +1,5 @@
+package root:component;
+
+world root {
+    include contract:built-in/built-in;
+}
