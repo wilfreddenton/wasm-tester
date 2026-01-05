@@ -10,7 +10,7 @@ use wit_component::ComponentEncoder;
 wasmtime::component::bindgen!({
     path: "wit",
     imports: {
-        default: async | store | trappable,
+        default: trappable,
     }
 });
 
@@ -24,7 +24,7 @@ impl Runtime {
     pub fn new_engine() -> Result<Engine> {
         let mut config = wasmtime::Config::new();
         config.async_support(true);
-        config.wasm_component_model(true);
+        config.wasm_component_model_async(true);
         config.consume_fuel(true);
         // Ensure deterministic execution
         config.wasm_threads(false);
