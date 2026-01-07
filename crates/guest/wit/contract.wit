@@ -3,5 +3,5 @@ package root:component;
 world root {
     include contract:built-in/built-in;
 
-    export use-foo: func() -> string;
+    export use-foo: async func() -> string;
 }

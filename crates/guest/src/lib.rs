@@ -3,9 +3,7 @@ wit_bindgen::generate!({
     path: "wit",
     generate_all,
     generate_unused_types: true,
-    async: [
-        "-import:contract:built-in/context#foo"
-    ]
+    async: false
 });
 
 struct Contract;
