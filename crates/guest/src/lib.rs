@@ -3,6 +3,7 @@ wit_bindgen::generate!({
     path: "wit",
     generate_all,
     generate_unused_types: true,
+    async: false
 });
 
 struct Contract;
